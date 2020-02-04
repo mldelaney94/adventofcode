@@ -1,12 +1,12 @@
+from heapq import nsmallest
+
 f = open("inputQ2.txt", "r")
 
 total = 0
 for line in f:
     line = line.rstrip()
-    split = line.split("x")
-    l = int(split[0])
-    w = int(split[1])
-    h = int(split[2])
-    total += 2*l*w + 2*w*h + 2*h*l + min(l*w, w*h, h*l)
+    split = [int(x) for x in line.split("x")]
+    split.sort()
+    total += split[0] + split[0] + split[1] + split[1] + (split[0]*split[1]*split[2])
 
 print(total)
