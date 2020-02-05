@@ -10,3 +10,4 @@ for line in f:
     total += split[0] + split[0] + split[1] + split[1] + (split[0]*split[1]*split[2])
 
 print(total)
+f.close()

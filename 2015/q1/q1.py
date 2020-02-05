@@ -12,6 +12,5 @@ for line in f:
         if (i == -1):
             break
 
-f.close()
-
 print (j)
+f.close()

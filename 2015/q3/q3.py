@@ -36,3 +36,4 @@ for line in f:
 
 q3_set3 = q3_set1.union(q3_set2)
 print(len(q3_set3))
+f.close()
