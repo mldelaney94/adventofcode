@@ -2,7 +2,7 @@ f = open ("inputQ6.txt")
 
 import numpy as np
 
-lightArray=np.zeros((1000, 1000), 'int32')
+lightArray = np.zeros((1000, 1000), 'int32')
 
 for line in f:
     line = line.strip()
@@ -18,7 +18,7 @@ for line in f:
             lightArray[xBot:xTop+1, yBot:yTop+1] += 1
         elif firstSplit[1] == 'off':
             lightArray[xBot:xTop+1, yBot:yTop+1] -= 1
-            lightArray[lightArray < 0] = 0
+            lightArray = np.where(lightArray < 0, 0, lightArray)
     elif firstSplit[0] == 'toggle':
         coordsBottomCorner = firstSplit[1].split(',')
         coordsTopCorner = firstSplit[3].split(',')
