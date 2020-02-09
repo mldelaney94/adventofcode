@@ -9,9 +9,9 @@ diff = 0
 def string_builder_with_advent_rules(advent_string):
     string_list = []
     i = 0
-    while (i < len(advent_string)-1):
+    while (i < len(advent_string)):
         if advent_string[i] == '"':
-            string_list.append(r'"\"')
+            string_list.append(r'\""')
         else:
             if advent_string[i] == '\\':
                 if advent_string[i+1] == '"':
