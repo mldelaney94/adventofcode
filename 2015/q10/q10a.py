@@ -39,7 +39,7 @@ def look_and_say_string_generator (in_str):
 output = look_and_say_string_generator(input)
 
 i = 0
-while (i < 39):
+while (i < 49):
     output = look_and_say_string_generator(output)
     i += 1
 
