@@ -76,7 +76,7 @@ r9_points = 0
 
 i = 0
 while i < TOTAL_TIME_FLYING:
-    max_dist_at_point = max(distance_reindeer[r1][i],
+    max_dist_at_time = max(distance_reindeer[r1][i],
     distance_reindeer[r2][i],
     distance_reindeer[r3][i],
     distance_reindeer[r4][i],
@@ -86,23 +86,23 @@ while i < TOTAL_TIME_FLYING:
     distance_reindeer[r8][i],
     distance_reindeer[r9][i])
 
-    if max_dist_at_point == distance_reindeer[r1][i]:
+    if max_dist_at_time == distance_reindeer[r1][i]:
         r1_points += 1
-    if max_dist_at_point == distance_reindeer[r2][i]:
+    if max_dist_at_time == distance_reindeer[r2][i]:
         r2_points += 1
-    if max_dist_at_point == distance_reindeer[r3][i]:
+    if max_dist_at_time == distance_reindeer[r3][i]:
         r3_points += 1
-    if max_dist_at_point == distance_reindeer[r4][i]:
+    if max_dist_at_time == distance_reindeer[r4][i]:
         r4_points += 1
-    if max_dist_at_point == distance_reindeer[r5][i]:
+    if max_dist_at_time == distance_reindeer[r5][i]:
         r5_points += 1
-    if max_dist_at_point == distance_reindeer[r6][i]:
+    if max_dist_at_time == distance_reindeer[r6][i]:
         r6_points += 1
-    if max_dist_at_point == distance_reindeer[r7][i]:
+    if max_dist_at_time == distance_reindeer[r7][i]:
         r7_points += 1
-    if max_dist_at_point == distance_reindeer[r8][i]:
+    if max_dist_at_time == distance_reindeer[r8][i]:
         r8_points += 1
-    if max_dist_at_point == distance_reindeer[r9][i]:
+    if max_dist_at_time == distance_reindeer[r9][i]:
         r9_points += 1
 
     i += 1
