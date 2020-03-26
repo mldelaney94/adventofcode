@@ -10,6 +10,8 @@ def increment_string(to_inc):
     if it passes from z to a, then the char directly before that char is
     incremented by one """
     inc_list = list(to_inc)
+    if 'i' in inc_list or 'o' in inc_list or 'l' in inc_list:
+        inc_list = auto_increment(inc_list)
     if inc_list[7] == 'z':
         inc_list[7] = 'a'
         if inc_list[6] == 'z':
@@ -47,9 +49,19 @@ def increment_string(to_inc):
 def is_legal_string(to_verify):
     """ takes in lowercase ascii string 8 chars long """
     list_verify = list(to_verify)
-    if ('i', 'o', 'l') in list_verify:
-        return False
-    return has_increasing_straight(list_verify) and has_two_nonoverlapping_pairs(list_verify)
+    return has_increasing_straight(list_verify) and has_two_nonoverlapping_pairs(list_verify) and 'i' not in list_verify and 'o' not in list_verify and 'l' not in list_verify
+
+def auto_increment(to_inc):
+    """ increments the string manually if i, o or l is present """
+    dex = -1
+    for index, char in enumerate(to_inc):
+        if char == 'o' or char == 'i' or char == 'l':
+            dex = index
+    to_inc[dex] = chr(ord(to_inc[dex])+1)
+    for i in range(dex+1, len(to_inc)+1):
+        if i < len(to_inc):
+            to_inc[i] = 'a'
+    return to_inc
 
 def has_increasing_straight(this_list):
     """ Checks string has three chars in a row with a numerical distance of
@@ -71,8 +83,8 @@ def has_two_nonoverlapping_pairs(this_list):
         if i == 7:
             break
         first = this_list[i]
-        middle = this_list[i+1]
-        if first == middle and middle != already_discovered:
+        second = this_list[i+1]
+        if first == second and second != already_discovered:
             num += 1
             already_discovered = first
     if num >= 2:
@@ -80,11 +92,15 @@ def has_two_nonoverlapping_pairs(this_list):
     return False
 
 def main():
-    curr_password = 'hxbxxzaa'
+    next_password = 'hxbxxzaa'
+    curr_password = 'axxiaabc'
+    iterations = 0
     while not is_legal_string(curr_password):
         curr_password = increment_string(curr_password)
+        iterations += 1
 
     print(curr_password)
+    print(iterations)
 
 
 if __name__ == '__main__':
