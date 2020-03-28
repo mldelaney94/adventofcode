@@ -1,4 +1,4 @@
-""" finds the *REAL* aunt Sue 
+""" finds the *REAL* aunt Sue
 In particular, what the problem means is that the real Sue has > 7 cats, > 3 trees,
 < 5 goldfish and < 3 pomeranians, so equalling that number is also wrong
 I struggled because I thought it meant that the sue's in the input had greater
