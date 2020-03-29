@@ -1,0 +1,46 @@
+1 jio a, +16
+2 inc a
+3 inc a
+4 tpl a
+5 tpl a
+6 tpl a
+7 inc a
+8 inc a
+9 tpl a
+10 inc a
+11 inc a
+12 tpl a
+13 tpl a
+14 tpl a
+15 inc a
+16 jmp +23
+17 tpl a
+18 inc a
+19 inc a
+20 tpl a
+21 inc a
+22 inc a
+23 tpl a
+24 tpl a
+25 inc a
+26 inc a
+27 tpl a
+28 inc a
+29 tpl a
+30 inc a
+31 tpl a
+32 inc a
+33 inc a
+34 tpl a
+35 inc a
+36 tpl a
+37 tpl a
+38 inc a
+39 jio a, +8
+40 inc b
+41 jie a, +4
+42 tpl a
+43 inc a
+44 jmp +2
+45 hlf a
+46 jmp -7
